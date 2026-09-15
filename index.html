@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>document.documentElement.classList.add('js-ready');</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hallie Jose</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #f7f3ec;
+    --ink: #1c1a17;
+    --ink-soft: #55504a;
+    --rule: #ddd5c8;
+    --accent: #b5551f;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    line-height: 1.7;
+    overflow-x: hidden;
+  }
+  .page {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 110px 28px 72px;
+  }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(22px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes drawLine {
+    from { width: 0; }
+    to { width: 100%; }
+  }
+
+  h1 {
+    font-family: 'Fraunces', serif;
+    font-weight: 600;
+    font-size: clamp(52px, 11vw, 104px);
+    line-height: 0.95;
+    margin: 0 0 16px;
+    letter-spacing: -0.01em;
+    opacity: 0;
+    animation: fadeUp 0.9s ease-out 0.05s forwards;
+  }
+  .tagline {
+    color: var(--ink-soft);
+    font-size: clamp(14px, 2vw, 17px);
+    letter-spacing: 0.02em;
+    opacity: 0;
+    animation: fadeUp 0.9s ease-out 0.25s forwards;
+  }
+  .tagline span {
+    margin-right: 24px;
+    position: relative;
+    padding-bottom: 3px;
+  }
+  .tagline span::after {
+    content: "";
+    position: absolute;
+    left: 0; bottom: 0;
+    width: 0;
+    height: 1px;
+    background: var(--accent);
+    transition: width 0.4s ease;
+  }
+  .tagline span:hover::after { width: 100%; }
+
+  hr {
+    border: none;
+    border-top: 1px solid var(--rule);
+    margin: 40px 0;
+    position: relative;
+    overflow: hidden;
+  }
+  hr.draw::before {
+    content: "";
+    position: absolute;
+    left: 0; top: -1px;
+    height: 1px;
+    background: var(--accent);
+    animation: drawLine 1.1s ease-out 0.5s forwards;
+  }
+
+  p.bio {
+    margin: 0 0 22px;
+    color: var(--ink);
+    font-size: clamp(17px, 2.2vw, 19.5px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+  html.js-ready p.bio { opacity: 0; transform: translateY(18px); }
+  p.bio.visible { opacity: 1; transform: translateY(0); }
+  p.bio:last-of-type { margin-bottom: 0; }
+
+  .chapters { margin: 0; padding: 0; list-style: none; }
+  .chapters li {
+    margin-bottom: 4px;
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+  html.js-ready .chapters li { opacity: 0; transform: translateY(14px); }
+  .chapters li.visible { opacity: 1; transform: translateY(0); }
+  .chapters a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 4px;
+    text-decoration: none;
+    color: var(--ink);
+    font-size: clamp(19px, 3vw, 25px);
+    font-family: 'Fraunces', serif;
+    font-weight: 500;
+    border-bottom: 1px solid var(--rule);
+    position: relative;
+    overflow: hidden;
+    transition: color 0.3s ease, padding-left 0.3s ease;
+  }
+  .chapters a::before {
+    content: "";
+    position: absolute;
+    left: 0; top: 0; bottom: 0;
+    width: 0;
+    background: var(--ink);
+    z-index: 0;
+    transition: width 0.35s ease;
+  }
+  .chapters a span, .chapters a .arrow { position: relative; z-index: 1; }
+  .chapters a:hover {
+    color: var(--bg);
+    padding-left: 18px;
+  }
+  .chapters a:hover::before { width: 100%; }
+  .chapters .emoji {
+    margin-right: 14px;
+    font-size: 0.85em;
+    display: inline-block;
+    transition: transform 0.35s ease;
+  }
+  .chapters a:hover .emoji { transform: scale(1.25) rotate(-6deg); }
+  .arrow {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    opacity: 0;
+    transform: translateX(-8px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+  .chapters a:hover .arrow { opacity: 1; transform: translateX(0); }
+
+  footer {
+    margin-top: 52px;
+    color: var(--ink-soft);
+    font-size: 14.5px;
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+  html.js-ready footer { opacity: 0; transform: translateY(14px); }
+  footer.visible { opacity: 1; transform: translateY(0); }
+  footer a { color: var(--ink-soft); }
+  footer .copyright { margin-top: 18px; font-size: 13px; }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <h1>Hallie Jose</h1>
+  <div class="tagline">
+    <span>Strategic Partnerships</span><span>Community</span><span>Market Activations</span>
+  </div>
+
+  <hr class="draw">
+
+  <p class="bio">Hallie Jose has spent a decade building community and revenue at the intersection of sports, fitness, and brand partnerships, work that started at the Los Angeles Dodgers Foundation, supporting the Dodgers RBI program and donor-facing campaigns like the Blue Diamond Gala.</p>
+
+  <p class="bio">From there she moved to LAFC, where she helped shape strategic partner activations and built the reporting models partners used to evaluate their own performance, her first real exposure to the deal-making side of sports business.</p>
+
+  <p class="bio">In 2020 she founded We Go Healthy, an online and in-person coaching business built entirely on her own client relationships and programming, informed by collaboration with clinics like Dang Physical Therapy and Mamba Sports Academy. She built the platform herself, on Trainerize, and grew the business past six figures in cumulative revenue while designing multi-phase training programs like her Marathon Prep Series.</p>
+
+  <p class="bio">In 2024 she founded Run the Blocks, an Arts District run and strength community that grew from zero to a hundred-plus weekly members and became a real activation partner for brands like Vuori, On, Adidas, and Zappos, not through paid placements, but through events people actually wanted to show up to.</p>
+
+  <p class="bio">She's now pivoting into her next chapter: scaling the impact she's made at the local level to a broader, global stage. After years of direct coaching and hands-on community building, she's driven to bring her strengths in partner management and community engagement to a role where she can strategically shape the systems that empower millions of athletes, blending performance, strategy, and market activations.</p>
+
+  <hr>
+
+  <ul class="chapters">
+    <li><a href="run-the-blocks.html"><span><span class="emoji">🏃</span>Run the Blocks</span><span class="arrow">&rarr;</span></a></li>
+    <li><a href="we-go-healthy.html"><span><span class="emoji">💪</span>We Go Healthy</span><span class="arrow">&rarr;</span></a></li>
+    <li><a href="lafc.html"><span><span class="emoji">⚽</span>LAFC</span><span class="arrow">&rarr;</span></a></li>
+    <li><a href="dodgers-foundation.html"><span><span class="emoji">⚾</span>LA Dodgers Foundation</span><span class="arrow">&rarr;</span></a></li>
+    <li><a href="resume.pdf"><span><span class="emoji">📄</span>Resume</span><span class="arrow">&rarr;</span></a></li>
+    <li><a href="https://www.linkedin.com/in/hallie-jose/"><span><span class="emoji">💼</span>LinkedIn</span><span class="arrow">&rarr;</span></a></li>
+  </ul>
+
+  <footer>
+    323-204-2617<br>
+    halliejose14@gmail.com<br>
+    <a href="https://www.linkedin.com/in/hallie-jose/">linkedin.com/in/hallie-jose</a>
+    <div class="copyright">&copy; 2026 Hallie Jose</div>
+  </footer>
+
+</div>
+
+<script>
+  var revealEls = document.querySelectorAll('.bio, .chapters li, footer');
+  var observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15 });
+  revealEls.forEach(function(el) { observer.observe(el); });
+
+  // stagger the chapter list slightly
+  document.querySelectorAll('.chapters li').forEach(function(li, i) {
+    li.style.transitionDelay = (i * 0.06) + 's';
+  });
+</script>
+
+</body>
+</html>
