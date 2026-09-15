@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Partnerships & Events: Hallie Jose / Run the Blocks</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #17130f;
+    --ink-soft: #2b2420;
+    --accent: #d94f1e;
+    --accent-soft: #f2a583;
+    --gold: #d9a441;
+    --cream: #f3eee6;
+    --cream-dim: #cabfae;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    background: var(--ink);
+    color: var(--cream);
+    font-family: 'Inter', sans-serif;
+    line-height: 1.55;
+  }
+  h1, h2, h3, .display {
+    font-family: 'Bebas Neue', sans-serif;
+    font-weight: 400;
+    letter-spacing: 0.01em;
+    line-height: 0.95;
+    color: var(--cream);
+    margin: 0;
+  }
+  .wrap { max-width: 1120px; margin: 0 auto; padding: 0 32px; }
+  a { color: inherit; }
+
+  /* ---------- placeholder photo block ---------- */
+  .photo-slot {
+    position: relative;
+    background: repeating-linear-gradient(135deg, #241c17, #241c17 12px, #2c221b 12px, #2c221b 24px);
+    border: 1px dashed var(--accent-soft);
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--accent-soft);
+    font-size: 13px;
+    padding: 24px;
+    min-height: 220px;
+  }
+  .photo-slot span { font-family: 'Inter', sans-serif; font-style: italic; opacity: 0.85; }
+  .photo-slot.filled { padding: 0; background: none; border: none; overflow: hidden; }
+  .photo-slot.filled img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .photo-gallery { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; flex: 1 1 380px; }
+  .photo-gallery img { width: 100%; height: 100%; object-fit: cover; border-radius: 6px; display: block; }
+  .photo-gallery.two { grid-template-columns: 1fr 1fr; }
+
+  /* ---------- header ---------- */
+  header {
+    padding: 64px 0 40px;
+    border-bottom: 1px solid #2b2420;
+  }
+  .kicker {
+    color: var(--accent);
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+  header h1 { font-size: clamp(48px, 9vw, 104px); }
+  header p.lede {
+    max-width: 540px;
+    color: var(--cream-dim);
+    font-size: 18px;
+    margin-top: 18px;
+  }
+
+  /* ---------- brand wall ---------- */
+  .brandwall {
+    padding: 36px 0;
+    border-bottom: 1px solid #2b2420;
+    overflow-x: auto;
+  }
+  .brandwall-track {
+    display: flex;
+    gap: 14px;
+    width: max-content;
+    padding: 0 0 4px;
+  }
+  .brandtag {
+    border: 1px solid #4a3f36;
+    color: #ffffff;
+    padding: 10px 18px;
+    border-radius: 999px;
+    font-size: 14px;
+    font-weight: 600;
+    white-space: nowrap;
+  }
+  .brandlogo {
+    height: 34px;
+    width: auto;
+    display: block;
+  }
+
+  /* ---------- numbers band ---------- */
+  .numbers {
+    padding: 56px 0;
+    border-bottom: 1px solid #2b2420;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+  }
+  .numbers .stat { flex: 1 1 200px; }
+  .numbers .stat .display { font-size: 56px; color: var(--accent); }
+  .numbers .stat p { margin: 6px 0 0; color: var(--cream-dim); font-size: 14px; }
+
+  /* ---------- feature sections (alternating) ---------- */
+  .feature {
+    padding: 88px 0;
+    border-bottom: 1px solid #2b2420;
+  }
+  .feature .grid {
+    display: flex;
+    gap: 56px;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .feature .grid > .text { flex: 1 1 460px; }
+  .feature .grid > .photo-slot { flex: 1 1 380px; order: 2; }
+  .feature.reverse .grid > .photo-slot { order: -1; }
+  .feature .tag { color: var(--accent); font-weight: 700; font-size: 14px; margin-bottom: 14px; }
+  .feature h2 { font-size: clamp(36px, 5vw, 58px); margin-bottom: 18px; }
+  .feature p.copy { color: var(--cream-dim); font-size: 16.5px; max-width: 46ch; }
+  .feature .pull {
+    margin-top: 26px;
+    display: flex;
+    gap: 32px;
+    flex-wrap: wrap;
+  }
+  .feature .pull .n { font-family: 'Bebas Neue'; font-size: 38px; color: var(--gold); display: block; }
+  .feature .pull .l { color: var(--cream-dim); font-size: 12.5px; }
+  .feature .photo-slot { min-height: 340px; }
+
+  /* ---------- spotlight (Made in LA) ---------- */
+  .spotlight {
+    background: linear-gradient(180deg, #211a15, #17130f);
+    padding: 96px 0;
+    border-bottom: 1px solid #2b2420;
+  }
+  .spotlight .tag { color: var(--gold); font-weight: 700; font-size: 15px; margin-bottom: 14px; }
+  .spotlight h2 { font-size: clamp(44px, 7vw, 84px); max-width: 14ch; }
+  .spotlight p.copy { color: var(--cream-dim); font-size: 17px; max-width: 60ch; margin-top: 22px; }
+  .spotlight .statbar {
+    margin-top: 40px;
+    display: flex;
+    gap: 48px;
+    flex-wrap: wrap;
+    border-top: 1px solid #3a3029;
+    padding-top: 32px;
+  }
+  .spotlight .statbar .n { font-family: 'Bebas Neue'; font-size: 44px; color: var(--gold); }
+  .spotlight .statbar .l { color: var(--cream-dim); font-size: 13px; }
+
+  /* ---------- more collabs grid ---------- */
+  .more {
+    padding: 80px 0;
+  }
+  .more h2 { font-size: clamp(30px, 4vw, 44px); margin-bottom: 36px; }
+  .more-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 28px;
+  }
+  .more-item { flex: 1 1 280px; }
+  .more-item {
+    border-top: 2px solid var(--accent);
+    padding-top: 18px;
+  }
+  .more-item h3 { font-family: 'Inter'; font-size: 17px; font-weight: 700; margin-bottom: 8px; }
+  .more-item p { color: var(--cream-dim); font-size: 14.5px; margin: 0; }
+
+  footer {
+    padding: 64px 0 80px;
+    text-align: center;
+    border-top: 1px solid #2b2420;
+  }
+  footer h2 { font-size: clamp(32px, 5vw, 52px); }
+  footer p { color: var(--cream-dim); margin-top: 12px; }
+  footer .btn {
+    display: inline-block;
+    margin-top: 26px;
+    background: var(--accent);
+    color: #fff;
+    font-weight: 700;
+    padding: 14px 30px;
+    border-radius: 999px;
+    text-decoration: none;
+    font-size: 14px;
+  }
+
+  @media (max-width: 860px) {
+    .numbers .stat { flex-basis: 45%; }
+    .feature .grid > .text, .feature .grid > .photo-slot { flex-basis: 100%; order: 0; }
+    .more-item { flex-basis: 100%; }
+  }
+</style>
+</head>
+<body>
+
+<header class="wrap">
+  <a href="index.html" style="color:var(--accent-soft); text-decoration:none; font-size:13px; font-weight:600;">&larr; Hallie Jose</a>
+  <img src="images/logos/rtb-globe.png" alt="Run the Blocks" style="height:72px; width:auto; margin-top:22px; display:block;">
+  <h1 style="margin-top:18px;">WE DON'T RENT<br>ATTENTION. WE<br>BUILD IT.</h1>
+  <p class="lede">Two years, seven brand partners, and a run club that turned into the LA activation partners actually call first. Here's the receipts.</p>
+</header>
+
+<div class="brandwall">
+  <div class="wrap">
+    <div class="brandwall-track">
+      <img class="brandlogo" src="images/logos/vuori.png" alt="Vuori">
+      <img class="brandlogo" src="images/logos/adidas.png" alt="Adidas">
+      <img class="brandlogo" src="images/logos/on.png" alt="On">
+      <img class="brandlogo" src="images/logos/zappos.png" alt="Zappos">
+      <img class="brandlogo" src="images/logos/pruzan.png" alt="Pruzan Running">
+      <img class="brandlogo" src="images/logos/essentia.png" alt="Essentia Water">
+      <img class="brandlogo" src="images/logos/magna.png" alt="Drink Magna">
+      <img class="brandlogo" src="images/logos/madeinla.png" alt="Made in LA" style="transform: rotate(-3deg);">
+      <img class="brandlogo" src="images/logos/honeystinger.png" alt="Honey Stinger">
+      <img class="brandlogo" src="images/logos/evo.png" alt="Evo">
+      <img class="brandlogo" src="images/logos/celsius.png" alt="Celsius">
+      <img class="brandlogo" src="images/logos/hyq.png" alt="HY.Q">
+      <img class="brandlogo" src="images/logos/lmnt.png" alt="LMNT">
+      <img class="brandlogo" src="images/logos/neap.png" alt="NEAP">
+      <img class="brandlogo" src="images/logos/freaksofnature.png" alt="Freaks of Nature">
+      <img class="brandlogo" src="images/logos/dirtbag.png" alt="Dirtbag">
+      <img class="brandlogo" src="images/logos/dangpt.png" alt="Dang Physical Therapy">
+    </div>
+  </div>
+  <div class="wrap" style="margin-top:14px;">
+    <p style="color:var(--cream-dim); font-size:13px; margin:0;">Every logo above is the real thing.</p>
+  </div>
+</div>
+
+<div class="numbers wrap">
+  <div class="stat"><div class="display">30+</div><p>Events produced</p></div>
+  <div class="stat"><div class="display">7+</div><p>Active brand partners</p></div>
+  <div class="stat"><div class="display">250+</div><p>Strava members in 4 months</p></div>
+  <div class="stat"><div class="display">100+</div><p>Weekly community members</p></div>
+</div>
+
+<!-- VUORI -->
+<section class="feature">
+  <div class="wrap grid">
+    <div class="text">
+      <div class="tag">Studio Takeover</div>
+      <h2>Vuori</h2>
+      <p class="copy">A full-day brand takeover at Vuori Citadel, built around a community strength workout instead of a product table. The kind of activation a brand remembers because their own customers ran it.</p>
+      <div class="pull">
+        <div><span class="n">1</span><span class="l">Full-day flagship<br>studio activation</span></div>
+      </div>
+    </div>
+    <div class="photo-gallery two">
+      <img src="images/vuori-1.jpg" alt="RTB crew outside the Vuori storefront">
+      <img src="images/vuori-2.jpg" alt="Vuori studio takeover agility drills">
+    </div>
+  </div>
+</section>
+
+<!-- ON -->
+<section class="feature reverse">
+  <div class="wrap grid">
+    <div class="text">
+      <div class="tag">Multi-Year Partner</div>
+      <h2>On</h2>
+      <p class="copy">Not a one-off. On came back for shoe demos, a marathon shakeout, and eventually Melting Miles, the relay that became RTB's biggest proof point yet, one of several RTB activations that have pulled 200+ people out for a single night. Four activations, one relationship, still growing.</p>
+      <div class="pull">
+        <div><span class="n">4</span><span class="l">Distinct activations<br>across two years</span></div>
+        <div><span class="n">200+</span><span class="l">Attendees at RTB's<br>largest On activations</span></div>
+      </div>
+    </div>
+    <div class="photo-slot filled"><img src="images/on-1.jpg" alt="On shoe demo, group photo, and city skyline"></div>
+  </div>
+</section>
+
+<!-- MELTING MILES -->
+<section class="feature">
+  <div class="wrap grid">
+    <div class="text">
+      <div class="tag">Signature Event · On x Pruzan Running</div>
+      <img src="images/logos/melting-miles-lockup.png" alt="Melting Miles" style="height:76px; width:auto; margin-bottom:6px;">
+      <p class="copy">A relay and recovery night that pulled runners from clubs across the whole city, not just RTB's own. This is the night the Made in LA Relay pitch deck was built on.</p>
+      <div class="pull">
+        <div><span class="n">100+</span><span class="l">Runners across LA<br>run clubs</span></div>
+      </div>
+    </div>
+    <div class="photo-gallery">
+      <img src="images/melting-miles-1.jpg" alt="Melting Miles finishers with medals">
+      <img src="images/melting-miles-2.jpg" alt="Melting Miles branded jacket detail">
+      <img src="images/melting-miles-3.jpg" alt="Melting Miles x Pruzan hoodie and medal">
+      <img src="images/melting-miles-4.jpg" alt="Rows of Melting Miles finisher medals">
+    </div>
+  </div>
+</section>
+
+<!-- ADIDAS -->
+<section class="feature reverse">
+  <div class="wrap grid">
+    <div class="text">
+      <div class="tag">Multi-Club Activation</div>
+      <h2>Adidas</h2>
+      <p class="copy">The World Cup Flag Run brought Adidas into the same room as Mid-City Runners for a shared celebration of local run culture at Arts District Brewing, drawing a crowd of 200+. Adidas also backed a separate, competitive Mile Time Trial through Adidas Running.</p>
+      <div class="pull">
+        <div><span class="n">2</span><span class="l">Separate Adidas<br>activations</span></div>
+        <div><span class="n">200+</span><span class="l">Runners at the World<br>Cup Flag Run</span></div>
+      </div>
+    </div>
+    <div class="photo-gallery two">
+      <img src="images/adidas-1.jpg" alt="World Cup Flag Run group photo with flags">
+      <img src="images/adidas-2.jpg" alt="Adidas Mile Time Trial shoe lineup">
+    </div>
+  </div>
+</section>
+
+<!-- ZAPPOS -->
+<section class="feature">
+  <div class="wrap grid">
+    <div class="text">
+      <div class="tag">LA Marathon Activation Partner</div>
+      <h2>Zappos</h2>
+      <p class="copy">Zappos helped RTB activate for the LA Marathon, backing a pre-race shakeout run and sponsored race-day watch booths timed around one of the biggest race weekends in the city. Zappos got in front of thousands of runners; RTB ran the room.</p>
+      <div class="pull">
+        <div><span class="n">2</span><span class="l">Touchpoints: shakeout<br>run + race-day booths</span></div>
+      </div>
+    </div>
+    <div class="photo-slot filled"><img src="images/zappos-1.jpg" alt="RTB runners with LA Marathon finisher medals"></div>
+  </div>
+</section>
+
+<!-- HYBRID NIGHTS -->
+<section class="feature">
+  <div class="wrap grid">
+    <div class="text">
+      <div class="tag">Signature Series · Monthly</div>
+      <h2>Hybrid Nights</h2>
+      <p class="copy">Once a month, RTB blends a run and a strength session into a single night, built specifically to live out the club's mission: for the community, by the community. No brand deck required, just the program that got RTB here in the first place, and the one members show up for every month without being asked twice.</p>
+    </div>
+    <div class="photo-slot filled"><img src="images/hybrid-nights-1.jpg" alt="Hybrid Night medicine ball training session"></div>
+  </div>
+</section>
+
+<!-- MADE IN LA SPOTLIGHT -->
+<section class="spotlight">
+  <div class="wrap">
+    <div class="tag">Coming November 2026</div>
+    <h2>MADE IN LA<br>RELAY & MARKET</h2>
+    <p class="copy">RTB's biggest activation to date: a large-scale community relay paired with a curated local vendor market at LA State Historic Park. Backward-planned across a full production timeline, with an active pipeline of target partners including Made in LA, Zappos, Vuori, ON Running, and Gatorade.</p>
+    <div class="statbar">
+      <div><div class="n">35</div><div class="l">Production tasks</div></div>
+      <div><div class="n">7</div><div class="l">Event phases</div></div>
+      <div><div class="n">6</div><div class="l">Leadership roles</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- MORE COLLABS -->
+<section class="more wrap">
+  <h2>More collaborations</h2>
+  <div class="more-grid">
+    <div class="more-item">
+      <h3>Speed Is a Goddess</h3>
+      <p>Pruzan Running. An all-women's Valentine's Day community run.</p>
+    </div>
+    <div class="more-item">
+      <h3>Block by Block Relay & Market</h3>
+      <p>Multi-team track relay plus a local vendor market. Full permitting and vendor curation.</p>
+    </div>
+    <div class="more-item">
+      <h3>Good Days Run Club</h3>
+      <p>Ladies' night 5K collab, hydration sponsored by HY.Q.</p>
+    </div>
+    <div class="more-item">
+      <h3>Renaissance in Motion</h3>
+      <p>Co-hosted community run through LA State Historic Park and Chinatown.</p>
+    </div>
+    <div class="more-item">
+      <h3>Essentia Water & Drink Magna</h3>
+      <p>Hydration and recovery brand activations woven into regular programming.</p>
+    </div>
+    <div class="more-item">
+      <h3>Cross-club network</h3>
+      <p>Ongoing collaborations with Mid-City Runners and the broader LA run community.</p>
+    </div>
+  </div>
+</section>
+
+<footer class="wrap">
+  <h2>Want RTB at your next activation?</h2>
+  <p>Brand partnerships, ambassador programs, and community-led events across Los Angeles.</p>
+  <a class="btn" href="mailto:halliejose14@gmail.com">Get in touch</a>
+</footer>
+
+</body>
+</html>
