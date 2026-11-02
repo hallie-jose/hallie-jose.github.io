@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hallie Jose</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #f3eee6;
+    --cream: #17130f;
+    --cream-dim: #55504a;
+    --accent: #d94f1e;
+    --accent-soft: #b5551f;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--ink);
+    color: var(--cream);
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    line-height: 1.7;
+  }
+  .page {
+    max-width: 1040px;
+    margin: 0 auto;
+    padding: 80px 28px 72px;
+  }
+
+  h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-weight: 400;
+    font-size: clamp(56px, 10vw, 96px);
+    line-height: 0.9;
+    color: var(--cream);
+    margin: 0 0 14px;
+  }
+  .tagline {
+    font-family: 'Bebas Neue', sans-serif;
+    color: var(--cream);
+    font-size: clamp(22px, 3.4vw, 32px);
+    letter-spacing: 0.01em;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 4px 14px;
+  }
+  .tagline span:not(.arrow) { margin-right: 10px; }
+  .tagline .arrow { margin-right: 10px; color: var(--accent); }
+
+  hr {
+    border: none;
+    border-top: 1px solid var(--accent);
+    margin: 36px 0;
+  }
+
+  /* two-column layout: bio on the left, chapters pinned on the right */
+  .layout {
+    display: flex;
+    gap: 56px;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+  .main-col {
+    flex: 1 1 480px;
+    min-width: 0;
+  }
+  .side-col {
+    flex: 0 0 280px;
+    position: sticky;
+    top: 40px;
+  }
+  .side-label {
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 18px;
+  }
+
+  p.bio {
+    margin: 0 0 20px;
+    color: var(--cream-dim);
+    font-size: 16px;
+  }
+  p.bio:last-of-type { margin-bottom: 0; }
+  p.bio b { color: var(--cream); font-weight: 600; }
+
+  .chapters { margin: 0; padding: 0; list-style: none; }
+  .chapters li { margin-bottom: 2px; }
+  .chapters a {
+    display: flex;
+    align-items: center;
+    padding: 14px 4px;
+    text-decoration: none;
+    color: var(--cream);
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 22px;
+    letter-spacing: 0.01em;
+    border-bottom: 1px solid #ddd5c8;
+  }
+  .chapters a:hover { color: var(--accent); }
+  .chapters .emoji {
+    margin-right: 14px;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.55em;
+  }
+
+  footer {
+    margin-top: 52px;
+    color: var(--cream-dim);
+    font-size: 14.5px;
+  }
+  footer a { color: var(--accent-soft); }
+  footer .copyright { margin-top: 18px; font-size: 13px; color: #a89f8e; }
+
+  @media (max-width: 760px) {
+    .layout { flex-direction: column; gap: 8px; }
+    .side-col { position: static; width: 100%; order: -1; }
+    .side-col hr { margin: 24px 0; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <h1>HALLIE JOSE</h1>
+  <div class="tagline">
+    <span>Creative Strategy</span><span class="arrow">&rarr;</span><span>Community Building</span><span class="arrow">&rarr;</span><span>Strategic Partnerships</span>
+  </div>
+
+  <hr class="after-header">
+
+  <div class="layout">
+
+    <div class="main-col">
+      <p class="bio">Hallie Jose has spent the last decade building community at the intersection of sports, fitness, and brand partnerships. It started at the <b>Los Angeles Dodgers Foundation</b>, where she supported the Dodgers RBI (Reviving Baseball in Inner Cities) program and donor campaigns like the Blue Diamond Gala, an early lesson in how much of business really comes down to people.</p>
+
+      <p class="bio">At <b>Los Angeles Football Club</b>, she designed a Tableau reporting platform that informed strategic decisions on growing the team's revenue through partnerships, social media, and other areas of business development. In 2019, the year she worked in the club's business and data strategy department, the team was named MLS Business Analytics Team of the Year, recognized by Major League Soccer for its strategy, analytic approach, and data-driven methodology. It's where she learned to pair data with the relationship-building that brings partners back.</p>
+
+      <p class="bio">In 2020, Hallie founded <b>We Go Healthy</b>, an online and in-person coaching business built on her own client relationships and shaped by collaboration with clinics like Dang Physical Therapy and Mamba Sports Academy. Her clients ranged from busy professionals to performing athletes, with goals from weight loss to the LA, New York, Valencia, and Chicago Marathons. Her focus eventually turned to performance running, and she now works as a strength coach for distance runners. She also runs its marketing end to end, from race-specific campaigns like the Marathon Prep Series to organic and paid social that lifted conversions by 20%. In six years she has coached 1,000+ people, with roughly half staying long-term, not because of a workout plan, but because she taught them to trust their own consistency again.</p>
+
+      <p class="bio">In 2024, she founded <b>Run the Blocks</b>, an Arts District run and strength community that grew to 100+ weekly members and 300+ members overall. The programming stayed performance-heavy, and the partnerships followed the community: Vuori, On, Adidas, and Zappos reached out to collaborate, with events pulling 200+ people out for a single night. She built the brand, content, and event calendar herself, so the partnerships grew from a community people genuinely wanted to be part of, not from paid placements. Most of all, it became a space where members found training partners and real friendships.</p>
+
+      <p class="bio">Along the way, Hallie built a rare mix of skills: the instincts of a coach and community builder, the storytelling and campaign sense of a marketer, and the data-driven, deal-structuring side of a partnerships operator. As one manager put it: <i>"It's rare to find someone who strikes such a perfect balance between soft and hard skills at this point in their career. Hallie's unique combination of interpersonal and technical skills consistently allows her to operate above her level and provide outsized business impact."</i></p>
+
+      <p class="bio">Now she's ready to scale the impact she's made locally to a global stage. The throughline has always been the same: take a community or a client from where they are to a goal that once felt out of reach, whether that's a signed brand deal or a first 5K. She's excited to bring that into a team where she can help a company build the brand, communities, partnerships, and systems that let it grow, at a scale far beyond the hundreds she's reached directly.</p>
+
+      <footer>
+        323-204-2617<br>
+        halliejose14@gmail.com<br>
+        <a href="https://www.linkedin.com/in/hallie-jose/">linkedin.com/in/hallie-jose</a>
+        <div class="copyright">&copy; 2026 Hallie Jose</div>
+      </footer>
+    </div>
+
+    <div class="side-col">
+      <div class="side-label">Explore</div>
+      <ul class="chapters">
+        <li><a href="run-the-blocks.html"><span class="emoji">🏃</span>Run the Blocks</a></li>
+        <li><a href="we-go-healthy.html"><span class="emoji">💪</span>We Go Healthy</a></li>
+        <li><a href="lafc.html"><span class="emoji">⚽</span>Los Angeles Football Club</a></li>
+        <li><a href="dodgers-foundation.html"><span class="emoji">⚾</span>Los Angeles Dodgers Foundation</a></li>
+        <li><a href="resume.pdf"><span class="emoji">📄</span>Resume</a></li>
+        <li><a href="https://www.linkedin.com/in/hallie-jose/"><span class="emoji">💼</span>LinkedIn</a></li>
+      </ul>
+    </div>
+
+  </div>
+
+</div>
+</body>
+</html>
